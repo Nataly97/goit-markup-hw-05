@@ -352,6 +352,17 @@ p {
     padding-right: 30px;
 }
 
+.link-active::after {
+    content: "";
+    width: 100%;
+    border: 2px solid var(--blue-color);
+    display: block;
+    border-radius: 50px;
+    margin-top: 32px;
+    position: absolute;
+    bottom: -33px;
+}
+
 .location {
     color: var(--white-color);
     font-weight: 400;
@@ -396,24 +407,13 @@ p {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.2;
+    position: relative;
 }
 
 .menu .link:hover,
 .link:focus {
     text-decoration: none;
     color: var(--blue-color);
-
-}
-
-/* Línea del menú, PENDIENTE */
-.link-active::after {
-    content: "";
-    width: 100%;
-    border: 2px solid var(--blue-color);
-    display: block;
-    border-radius: 50px;
-    margin-top: 32px;
-    position: absolute;
 }
 
 .our-team {
