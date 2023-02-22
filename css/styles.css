@@ -150,18 +150,12 @@ p {
     background: var(--white-color);
     flex-basis: calc((100% - 150px) / 3);
     margin: 15px;
+    border: 1px solid #EEEEEE;
 }
 
 .catalogue-container {
     overflow: hidden;
     position: relative;
-    /* width: 370px;
-    height: 294px; */
-
-}
-
-.catalogue-container:hover .catalogue-text {
-    transform: translateY(0%);
 }
 
 .catalogue-text {
@@ -171,33 +165,31 @@ p {
     height: 100%;
     width: 100%;
     background-color: var(--color-catalogue);
-    transform: translateY(101%);
+    transform: translateY(105%);
     transition: transform 250ms ease;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .catalogue-text>p {
     color: var(--white-color);
     width: 322px;
     height: 168px;
-    padding-top: 63px;
-    padding-bottom: 63px;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 63px 24px;
     line-height: 28px;
+}
+
+.catalogue>.title-catalogue {
+    padding: 20px 24px;
+}
+
+.catalogue:hover .catalogue-text {
+    transform: translateY(0%);
 }
 
 .catalogue:hover,
 .catalogue:focus {
     cursor: pointer;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.catalogue> .title-catalogue{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 24px;
-    padding-right: 24px;
-    border: 1px solid #EEEEEE;
 }
 
 .catalogue-briefcase {
@@ -215,10 +207,7 @@ p {
     border: none;
     background: #F5F4FA;
     border-radius: 4px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding: 6px 24px;
     margin-left: 8px;
 }
 
@@ -414,6 +403,11 @@ p {
     text-decoration: none;
     color: var(--blue-color);
 
+}
+
+/* Línea del menú, PENDIENTE */
+.item::after {
+    border: 2px solid var(--blue-color);
 }
 
 .our-team {
