@@ -406,8 +406,14 @@ p {
 }
 
 /* Línea del menú, PENDIENTE */
-.item::after {
+.link-active::after {
+    content: "";
+    width: 100%;
     border: 2px solid var(--blue-color);
+    display: block;
+    border-radius: 50px;
+    margin-top: 32px;
+    position: absolute;
 }
 
 .our-team {
